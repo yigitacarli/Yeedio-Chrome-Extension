@@ -1,3 +1,4 @@
+![Yeedio Preview](banner.png)
 # 🎧 Yeedio: Video Speed & Volume Booster
 
 Take full control of your web media experience! Yeedio is a lightweight, all-in-one Chrome extension that allows you to boost audio volume and control video playback speed seamlessly.
