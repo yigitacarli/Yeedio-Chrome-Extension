@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yeedio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="header-container">
+        <h1>Yeedio</h1>
+        <img src="icons/icon48.png" alt="Yeedio Logo" class="header-logo">
+    </div>
+
+    <div class="content-container">
+        <!-- Video Speed Section -->
+        <div class="section">
+            <div class="section-header">
+                <h3>Video Speed</h3>
+                <div class="input-wrapper">
+                    <input type="number" id="speed-input" min="0.25" max="16" step="0.25" value="1.0">
+                    <span>x</span>
+                </div>
+            </div>
+            <div class="slider-row">
+                <button id="speed-down" class="media-btn icon-only" title="Decrease speed">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <input type="range" id="speed-slider" min="0.25" max="16" step="0.25" value="1.0">
+                <button id="speed-up" class="media-btn icon-only" title="Increase speed">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <button id="resetSpeed" class="secondary-btn">Reset to Default</button>
+        </div>
+
+        <!-- Volume Booster Section -->
+        <div class="section">
+            <div class="section-header">
+                <h3>Volume Booster</h3>
+                <div class="input-wrapper">
+                    <input type="number" id="volume-input" min="0" max="600" value="100">
+                    <span>%</span>
+                </div>
+            </div>
+            <div class="slider-row volume-slider-row">
+                <input type="range" id="volume-slider" min="0" max="600" step="1" value="100" class="full-width-slider">
+            </div>
+            <button id="resetVolume" class="secondary-btn">Reset to Default</button>
+        </div>
+
+        <!-- Now Playing Card -->
+        <div class="now-playing-card">
+            <div class="now-playing-label">Now Playing</div>
+            <div class="now-playing-content">
+                <img id="active-tab-icon" src="" alt="" style="display: none;">
+                <div id="active-tab-title">Loading...</div>
+            </div>
+        </div>
+
+        <div id="status">Current Resolution: Unknown</div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

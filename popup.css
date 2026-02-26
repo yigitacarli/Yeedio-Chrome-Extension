@@ -1,0 +1,268 @@
+body {
+    width: 360px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Roboto, sans-serif;
+    color: #ffffff;
+    background-color: #18181b;
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+/* Main Content */
+.content-container {
+    padding: 20px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #a1a1aa;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.section {
+    margin-bottom: 24px;
+}
+
+.slider-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.volume-slider-row {
+    justify-content: center;
+}
+
+/* Thicker Range Sliders */
+input[type=range] {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    outline: none;
+    overflow: hidden;
+    /* For progress fill */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.full-width-slider {
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ffffff;
+    /* Perfectly round white thumb */
+    cursor: pointer;
+    box-shadow: -411px 0 0 400px #39FF14;
+    /* Neon green progress fill */
+    border: none;
+}
+
+/* Input Wrappers & Hidden Spinners */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: background-color 0.2s, border-color 0.2s;
+    min-width: 65px;
+    box-sizing: border-box;
+}
+
+.input-wrapper:focus-within {
+    border-color: #39FF14;
+    /* Action color */
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.2);
+}
+
+.input-wrapper input[type=number] {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: right;
+    outline: none;
+    width: 100%;
+    padding: 0;
+    margin-right: 4px;
+}
+
+.input-wrapper span {
+    font-size: 15px;
+    font-weight: 700;
+    color: #a1a1aa;
+}
+
+/* Completely Hide the default browser up/down arrows (spinners) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox fallback */
+}
+
+/* Buttons */
+button {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e4e4e7;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.1s;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(0.96);
+}
+
+/* Distinct Media Buttons */
+.media-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    /* Modern circular control buttons */
+}
+
+.media-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #39FF14;
+}
+
+.secondary-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    background-color: transparent;
+    color: #a1a1aa;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.secondary-btn:hover {
+    background-color: rgba(57, 255, 20, 0.1);
+    border-color: #39FF14;
+    color: #39FF14;
+}
+
+/* Now Playing Card */
+.now-playing-card {
+    margin-bottom: 20px;
+    padding: 14px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.now-playing-label {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #a1a1aa;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.now-playing-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#active-tab-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+}
+
+#active-tab-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Status / Resolution Tag */
+#status {
+    text-align: center;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #39FF14;
+    margin-top: 8px;
+    display: block;
+    /* Ensure it is integrated properly */
+}
